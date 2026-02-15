@@ -10,7 +10,7 @@
   ],
   "metadata": {
     "version": "1.0.0",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "description": "Tree-sitter grammar for TLC configuration files (.cfg)",
     "authors": [
       {

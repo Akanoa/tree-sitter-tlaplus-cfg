@@ -66,4 +66,4 @@ CHECK_DEADLOCK FALSE
 
 ## License
 
-MIT
+BSD 3-Clause
