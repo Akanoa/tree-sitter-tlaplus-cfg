@@ -1,0 +1,301 @@
+================
+Specification directive
+================
+
+SPECIFICATION Spec
+
+---
+
+(source_file
+  (specification
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Init and Next directives
+================
+
+INIT Init
+NEXT Next
+
+---
+
+(source_file
+  (init
+    keyword: (keyword)
+    name: (identifier))
+  (next
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Invariants directive with multiple identifiers
+================
+
+INVARIANT TypeOK SafetyProperty
+
+---
+
+(source_file
+  (invariants
+    keyword: (keyword)
+    (identifier)
+    (identifier)))
+
+================
+Properties directive
+================
+
+PROPERTY Termination
+
+---
+
+(source_file
+  (properties
+    keyword: (keyword)
+    (identifier)))
+
+================
+Constant assignment with number
+================
+
+CONSTANT N = 3
+
+---
+
+(source_file
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (constant_assignment
+        name: (identifier)
+        value: (number)))))
+
+================
+Constant assignment with set literal
+================
+
+CONSTANTS Value = {"a", "b", "c"}
+
+---
+
+(source_file
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (constant_assignment
+        name: (identifier)
+        value: (set_literal
+          (string
+            (string_content))
+          (string
+            (string_content))
+          (string
+            (string_content)))))))
+
+================
+Constant substitution with arrow
+================
+
+CONSTANT N <- ConstN
+
+---
+
+(source_file
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (constant_substitution
+        name: (identifier)
+        value: (identifier)))))
+
+================
+Constant as model value
+================
+
+CONSTANT ModelVal
+
+---
+
+(source_file
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (identifier))))
+
+================
+Check deadlock false
+================
+
+CHECK_DEADLOCK FALSE
+
+---
+
+(source_file
+  (check_deadlock
+    keyword: (keyword)
+    value: (boolean)))
+
+================
+Check deadlock true
+================
+
+CHECK_DEADLOCK TRUE
+
+---
+
+(source_file
+  (check_deadlock
+    keyword: (keyword)
+    value: (boolean)))
+
+================
+Symmetry directive
+================
+
+SYMMETRY Perms
+
+---
+
+(source_file
+  (symmetry
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+View directive
+================
+
+VIEW ViewExpr
+
+---
+
+(source_file
+  (view
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Alias directive
+================
+
+ALIAS AliasExpr
+
+---
+
+(source_file
+  (alias
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Constraint directive
+================
+
+CONSTRAINT StateConstraint
+
+---
+
+(source_file
+  (constraints
+    keyword: (keyword)
+    (identifier)))
+
+================
+Action constraint directive
+================
+
+ACTION_CONSTRAINT ActionCons
+
+---
+
+(source_file
+  (action_constraints
+    keyword: (keyword)
+    (identifier)))
+
+================
+Postcondition directive
+================
+
+POSTCONDITION PostCond
+
+---
+
+(source_file
+  (postcondition
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Type constraint directive
+================
+
+TYPE_CONSTRAINT TypeCons
+
+---
+
+(source_file
+  (type_constraint
+    keyword: (keyword)
+    name: (identifier)))
+
+================
+Line comment
+================
+
+\* This is a comment
+
+---
+
+(source_file
+  (comment))
+
+================
+Mixed content
+================
+
+\* TLC Configuration
+SPECIFICATION Spec
+CONSTANT N = 3
+INVARIANT TypeOK
+CHECK_DEADLOCK FALSE
+
+---
+
+(source_file
+  (comment)
+  (specification
+    keyword: (keyword)
+    name: (identifier))
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (constant_assignment
+        name: (identifier)
+        value: (number))))
+  (invariants
+    keyword: (keyword)
+    (identifier))
+  (check_deadlock
+    keyword: (keyword)
+    value: (boolean)))
+
+================
+Set literal with numbers
+================
+
+CONSTANT Procs = {1, 2, 3}
+
+---
+
+(source_file
+  (constants
+    keyword: (keyword)
+    (constant_entry
+      (constant_assignment
+        name: (identifier)
+        value: (set_literal
+          (number)
+          (number)
+          (number))))))

@@ -1,0 +1,24 @@
+{
+  "grammars": [
+    {
+      "name": "tlaplus_cfg",
+      "camelcase": "TlaPlusCfg",
+      "scope": "source.tlaplus-cfg",
+      "path": ".",
+      "file-types": ["cfg"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for TLC configuration files (.cfg)",
+    "authors": [
+      {
+        "name": "Noa"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Akanoa/tree-sitter-tlaplus-cfg"
+    }
+  }
+}

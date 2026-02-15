@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-tlaplus-cfg",
+  "version": "1.0.0",
+  "description": "Tree-sitter grammar for TLC configuration files (.cfg)",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "keywords": ["tree-sitter", "tlaplus", "tlc", "cfg"],
+  "author": "Noa <dev@guern.eu>",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "tree-sitter-cli": "^0.24.0"
+  }
+}
